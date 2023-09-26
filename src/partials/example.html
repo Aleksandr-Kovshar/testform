@@ -1,37 +1,65 @@
-<article class="example" id="uk">
-  <h1>HTML-partials</h1>
+<h1>Оставьте заявку!</h1>
+<form method="post" id="form">
+  <div class="row">
+    <label>🙂 Имя </label>
+    <input
+      type="text"
+      name="name"
+      placeholder=""
+      required
+      autofocus
+      autocomplete="off"
+      minlength="2"
+      maxlength="20"
+      title="как к Вам обращаться?"
+    />
+  </div>
 
-  <!--
-    ❗️❗️❗️ The path to images from the HTML partial
-    is the same as from the index.html file
-  -->
-  <img src="images/logo.png" alt="" width="320" />
+  <div class="row">
+    <label>📧 email</label>
+    <input
+      type="text"
+      name="email"
+      placeholder="что@то.ru"
+      required
+      autocomplete="off"
+      maxlength="40"
+      title="мы напишем сюда"
+    />
+  </div>
 
-  <p>
-    The
-    <a
-      href="https://github.com/posthtml/posthtml-include"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      posthtml-include
-    </a>
-    plugin allows you to add code from other HTML files (fragments) to HTML page
-    files. Fragments are stored in the <code>src/partials</code> folder. The
-    addition occurs when compiling page files, such as <code>index.html</code>.
-  </p>
+  <div class="row">
+    <label>🤙 телефон</label>
+    <input
+      type="text"
+      name="phone"
+      placeholder="+7..."
+      required
+      autocomplete="off"
+      minlength="10"
+      maxlength="12"
+      title="или в Telegram/WhatsApp"
+    />
+  </div>
 
-  <p>
-    This <code>example.html</code> file is an example of such a snippet, with
-    the markup of a certain part of the main page. This is very convenient for
-    team development on student projects, when several people write in one HTML
-    file at once.
-  </p>
+  <div class="row">
+    <textarea
+      name="message"
+      maxlength="100"
+      id="message"
+      cols="30"
+      rows="4"
+      placeholder="Напишите мне"
+      title="уточните, чем я могу быть вам полезен?"
+    ></textarea>
+  </div>
 
-  <p>
-    The syntax for adding a fragment to the main file is:
-    <code> &lt;include src="./partials/filename.html"&gt;&lt;/include&gt;</code>
-  </p>
+  <div class="row">
+    <input type="checkbox" name="rule" id="rule" checked required />
+    <label for="rule">Согласны на обработку персональных данных</label>
+  </div>
 
-  <div class="background"></div>
-</article>
+  <div class="row">
+    <input type="submit" value="👉 отправить" />
+  </div>
+</form>
